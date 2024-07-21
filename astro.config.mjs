@@ -16,7 +16,7 @@ const env = loadEnv("", process.cwd(), ["STORYBLOK", "NETLIFY"]);
 export default defineConfig({
   site: "https://purewoodcreations.com/",
   output: "hybrid",
-  adapter: env.NETLIFY ? netlify() : vercel(), // vercel() or netlify()
+  adapter: vercel(), // vercel() or netlify()
   integrations: [
     storyblok({
       accessToken: env.STORYBLOK_PREVIEW_TOKEN,
